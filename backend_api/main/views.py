@@ -1,5 +1,5 @@
 from . import serializers
-from rest_framework import generics,pagination
+from rest_framework import generics,pagination,viewsets
 from . import models
 # Create your views here.
 #vendor
@@ -34,14 +34,24 @@ class CustomerDetail(generics.RetrieveUpdateDestroyAPIView):
 #Order
 class OrderList(generics.ListCreateAPIView):
     queryset = models.Order.objects.all()
-    serializer_class = serializers.OrderSerializer
+    serializer_class = serializers.OrderSerializer 
 
 class OrderDetail(generics.ListAPIView):
     #queryset = models.OrderItem.objects.all()
     serializer_class = serializers.OrderDetailSerializer
-
+ 
     def get_queryset(self):
         order_id = self.kwargs['pk']
         order = models.Order.objects.get(id=order_id)
         order_items=models.OrderItem.objects.filter(order=order)
         return order_items
+    
+class CustomerAddressViewSet(viewsets.ModelViewSet):
+    serializer_class = serializers.CustomerAddressSerializer
+    queryset=models.CustomerAddress.objects.all()
+
+class ProductRatingViewSet(viewsets.ModelViewSet):
+    serializer_class = serializers.ProductRatingSerializer
+    queryset = models.ProductRating.objects.all()
+
+    
