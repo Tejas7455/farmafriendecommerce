@@ -1,5 +1,7 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import logo from '../logo.svg'
+import AllProducts from './AllProducts';
 function Home() {
   return (
 <>   
@@ -7,7 +9,7 @@ function Home() {
   <main className='mt-4'>
     <div className='container'>
       {/* Latest Product */}
-      <h3 className='mb-4'>Latest Products<a href='#' className='float-end btn btn-sm btn-secondary'>View All Product <i className="fa-solid fa-arrow-right-long"></i></a></h3>
+      <h3 className='mb-4'>Latest Products<NavLink to='/allproducts' className='float-end btn btn-sm btn-secondary'>View All Product <i className="fa-solid fa-arrow-right-long"></i></NavLink></h3>
     <div className="row mb-4">
 
       {/* Product Area*/}
