@@ -7,12 +7,15 @@ function AllProducts() {
     <section className='container mt-4'>
        {/* Category Product */}
        <h3 className='mb-4'>All Products</h3>
-       <div className="row mb-4">
+     
+       <div className="row mb-3">
         <SingleProduct title="Seeds 1"/>
         <SingleProduct title="Seeds 2"/>
         <SingleProduct title="Seeds 3"/>
         <SingleProduct title="Seeds 4"/>
+        
         </div>
+       
          {/* Product Area*/}
        <div className="col-12 col-md-3 mb-4">
        <div className="card">

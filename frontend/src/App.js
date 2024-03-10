@@ -16,9 +16,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/categories' element={<Categories />} />
-          <Route path='category/:category_slug/:category_id' element={<CategoryProduct />} />
           <Route path='/allproducts' element={<AllProducts/>} />
-          <Route path='/productdetail/:product_slug/:product_id' element={<ProductDetail/>}/>
+          <Route path='category/:category_slug/:category_id' element={<CategoryProduct />} />
+          <Route path='/product/:product_slug/:product_id' element={<ProductDetail/>} />
         </Routes>
         <NavBar />
         <Footer/>
