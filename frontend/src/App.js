@@ -8,6 +8,7 @@ import Categories from './Components/Categories';
 import CategoryProduct from './Components/CategoryProduct';
 import AllProducts from './Components/AllProducts';
 import ProductDetail from './Components/ProductDetail';
+import Checkout from './Components/Checkout';
 function App() {
   return (
       <>
@@ -19,6 +20,7 @@ function App() {
           <Route path='/allproducts' element={<AllProducts/>} />
           <Route path='category/:category_slug/:category_id' element={<CategoryProduct />} />
           <Route path='/product/:product_slug/:product_id' element={<ProductDetail/>} />
+          <Route path='/checkout' element={<Checkout/>} />
         </Routes>
         <NavBar />
         <Footer/>

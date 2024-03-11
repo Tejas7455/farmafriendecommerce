@@ -1,25 +1,22 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import logo from '../logo.svg'
+import logo from '../logo.svg';
 import AllProducts from './AllProducts';
 import SingleProduct from './SingleProduct';
 function Home() {
   return (
-<>   
 
   <main className='mt-4'>
     <div className='container'>
-      <div>
       {/* Latest Product */}
       <h3 className='mb-4'>Latest Products<NavLink to='/allproducts' className='float-end btn btn-sm btn-secondary'>View All Product 
       <i className="fa-solid fa-arrow-right-long"></i></NavLink></h3>
-  
       {/* Product Area*/}
-    <div className='row mb-4'>
-      <SingleProduct title="Seeds 1"/>
-      <SingleProduct title="Seeds 2"/>
-      <SingleProduct title="Seeds 3"/>
-      <SingleProduct title="Seeds 4"/>
+      <div className='row mb-4'>
+        <SingleProduct title="Seeds 1"/>
+        <SingleProduct title="Seeds 2"/>
+        <SingleProduct title="Seeds 3"/>
+        <SingleProduct title="Seeds 4"/>
     </div>
     {/* End Latest product */}
 
@@ -147,9 +144,9 @@ function Home() {
     {/*Product End*/}
     </div>
     </div>
-    </div>
+    
     </main>
-    </>
+    
   )
 }
 

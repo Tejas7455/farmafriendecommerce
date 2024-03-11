@@ -18,7 +18,7 @@ function Header() {
                 <NavLink className="nav-link active" aria-current="page" to="/categories">Categories</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="#">Pricing</NavLink>
+                <NavLink className="nav-link active" aria-current="page" to="/checkout">My Cart (4)</NavLink>
                 </li>
             </ul>
             <span className="navbar-text">
